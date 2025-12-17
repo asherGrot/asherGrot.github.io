@@ -73,3 +73,31 @@ p{
     font-size:14px;
   }
 }
+/* אפקטים נעימים */
+.card{
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+  border-color: rgba(255,255,255,0.22);
+}
+
+.nav a, .btn{
+  transition: transform 140ms ease, opacity 140ms ease, filter 140ms ease;
+}
+
+.nav a:hover{
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.btn:active{
+  transform: translateY(0px) scale(0.99);
+
