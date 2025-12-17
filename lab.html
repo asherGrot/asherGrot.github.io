@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>מעבדה — AsherGrot</title>
+  <style>
+    body{margin:0;font-family:system-ui,-apple-system,Arial;background:#0b0f1a;color:#e8edf7}
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+    .card{width:min(900px,100%);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:22px}
+    .nav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+    .nav a{color:#e8edf7;text-decoration:none;padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.14)}
+    h1{margin:0 0 10px;font-size:28px}
+    p{margin:0 0 16px;line-height:1.8;opacity:.9}
+    .btn{padding:12px 16px;border-radius:12px;border:0;font-weight:700;cursor:pointer}
+    .primary{background:#6d5efc;color:white}
+    .row{display:flex;gap:12px;flex-wrap:wrap}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <main class="card">
+      <nav class="nav">
+        <a href="/">בית</a>
+        <a href="/about.html">אודות</a>
+        <a href="/lab.html">מעבדה</a>
+      </nav>
+
+      <h1>מעבדת ניסויים</h1>
+      <p>כאן אני בודק דברים קטנים: לחיצות, צבעים, התנהגות.</p>
+
+      <div class="row">
+        <button class="btn primary" onclick="changeColor()">שנה צבע רקע</button>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function changeColor(){
+      const colors = ['#0b0f1a', '#1a0b0b', '#0b1a12', '#121a0b'];
+      document.body.style.background =
+        colors[Math.floor(Math.random() * colors.length)];
+    }
+  </script>
+</body>
+</html>
